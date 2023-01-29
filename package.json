@@ -7,15 +7,21 @@
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "parcel": "^2.8.0",
-    "test-jest": "^1.0.1"
+    "test-jest": "^1.0.1",
+    "ts-jest": "^29.0.5"
   },
   "scripts": {
     "test": "npx jest --watchAll"
   },
   "jest": {
-    "preset":"ts-jest",
-    "collectCoverage":true,
-    "testEnvironment":"node",
-    "coverageReporters":["html"]
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "html"
+    ]
+  },
+  "dependencies": {
+    "jsdom": "^21.1.0"
   }
 }

@@ -57,12 +57,12 @@ export function createHtml(todos: Todo[]) {
   }
 }
 
-function toggleTodo(todo: Todo) {
+export function toggleTodo(todo: Todo) {
   changeTodo(todo);
-  createHtml(todos);
+  exports.createHtml(todos);
 }
 
-function displayError(error: string, show: boolean) {
+export function displayError(error: string, show: boolean) {
   let errorContainer: HTMLDivElement = document.getElementById(
     "error"
   ) as HTMLDivElement;
@@ -78,7 +78,7 @@ function displayError(error: string, show: boolean) {
 
 export function clearTodos(todos: Todo[]) {
   removeAllTodos(todos);
-  createHtml(todos);
+  exports.createHtml(todos);
 }
 
 //createHtml(todos);
